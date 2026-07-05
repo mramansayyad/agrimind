@@ -1,0 +1,46 @@
+{
+  "Vidarbha": {
+    "district": "Yavatmal",
+    "state": "Maharashtra",
+    "coordinates": { "lat": 20.3888, "lon": 78.1204 },
+    "soil_type": "Deep Black Regur Soil (Vertisols)",
+    "soil_ph": 7.8,
+    "moisture_retention": "High clay capacity",
+    "recommended_crops": ["Cotton", "Soybean", "Tur Dal"],
+    "irrigation_source": "Rainfed / Canal / Borewell",
+    "common_pests": ["Pink Bollworm", "Whitefly", "Aphids"]
+  },
+  "Nashik": {
+    "district": "Nashik",
+    "state": "Maharashtra",
+    "coordinates": { "lat": 19.9975, "lon": 73.7898 },
+    "soil_type": "Red to Medium Black Loamy Soil",
+    "soil_ph": 6.8,
+    "moisture_retention": "Moderate drainage",
+    "recommended_crops": ["Onion", "Tomato", "Grapes"],
+    "irrigation_source": "Drip Irrigation / Dam Canals",
+    "common_pests": ["Thrips", "Downy Mildew", "Bacterial Blight"]
+  },
+  "Indore": {
+    "district": "Indore",
+    "state": "Madhya Pradesh",
+    "coordinates": { "lat": 22.7196, "lon": 75.8577 },
+    "soil_type": "Malwa Black Cotton Soil",
+    "soil_ph": 7.5,
+    "moisture_retention": "Very high water retention",
+    "recommended_crops": ["Soybean", "Wheat", "Gram (Chana)"],
+    "irrigation_source": "Tube Wells / River Pumping",
+    "common_pests": ["Stem Fly", "Girdle Beetle", "Pod Borer"]
+  },
+  "Punjab": {
+    "district": "Ludhiana",
+    "state": "Punjab",
+    "coordinates": { "lat": 30.9010, "lon": 75.8573 },
+    "soil_type": "Alluvial Silt Loam",
+    "soil_ph": 7.2,
+    "moisture_retention": "High fertility loamy soil",
+    "recommended_crops": ["Wheat", "Rice", "Mustard"],
+    "irrigation_source": "Canal Network / Heavy Tube Wells",
+    "common_pests": ["Yellow Rust", "Stem Borer", "Leaf Folder"]
+  }
+}

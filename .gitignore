@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment & Secrets
+.env
+.env.*
+*.env
+*.pem
+*.key
+
+# Build outputs & caches
+dist/
+build/
+.cache/
+.vite/
+
+# Firebase & IDE
+.firebase/
+.idea/
+.vscode/
+*.log
+
+# Exclude SKILL files as requested
+SKILL.md
+*.skill.md
+.skills/
