@@ -1,4 +1,4 @@
-# Technical Decisions & Architectural Choices — AgriMind
+# Technical Decisions & Architectural Choices — AgriMind v2
 
 ## 1. Single-Page Reactive Architecture (Vite + React + Tailwind)
 - **Decision**: Use Vite with React for fast loading (<1s initial paint) and single-page dashboard composition.
@@ -16,6 +16,14 @@
 - **Decision**: Calculate percentage deviation `(today_price - ma_7) / ma_7 * 100`. Flag deviations exceeding ±15%.
 - **Rationale**: Provides instant, rule-backed proactive alerts ("AI reaches out first") on page load.
 
-## 5. Firebase Anonymous Authentication
-- **Decision**: Auto-authenticate users anonymously via Firebase Auth SDK on app mount.
-- **Rationale**: Fulfills authentication requirement without imposing sign-up friction on judges during evaluation.
+## 5. Firebase Anonymous Authentication & Graceful Guest Mode
+- **Decision**: Automatically attempt Firebase Anonymous Auth if keys are present; otherwise fall back cleanly to a guest farmer session.
+- **Rationale**: Eliminates network errors when running without a configured Firebase project while fulfilling auth requirements when deployed.
+
+## 6. Deterministic Least-Squares Linear Regression Forecasts
+- **Decision**: Implement linear regression for general crop/region price trajectories while retaining the Cotton/Vidarbha rebound curve as the explicit hackathon demo scenario.
+- **Rationale**: Guarantees identical, reproducible output when calling `/forecast` repeatedly on any crop.
+
+## 7. UI Contrast Design (Evaluation Screen Polish)
+- **Decision**: Retain dark high-contrast theme for evaluator laptops/projectors.
+- **Rationale**: Provides optimal visual presentation during pitch evaluations; light-mode variant is planned for outdoor direct-sunlight field deployment.
