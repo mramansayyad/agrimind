@@ -5,13 +5,6 @@
 
 ---
 
-## 🚀 Live Public Access URLs
-
-- **Frontend App (Firebase Hosting)**: `https://agrimind-demo.web.app` *(or local verification at `http://localhost:3000`)*
-- **Backend API Engine (Google Cloud Run)**: `https://agrimind-backend-proxy-uc.a.run.app` *(or local verification at `http://localhost:8080`)*
-
----
-
 ## 📌 Problem & Persona Focus
 
 - **Primary Persona**: **Ramesh**, a cotton and soybean farmer in Yavatmal district (Vidarbha region), Maharashtra.
@@ -31,7 +24,7 @@
 | **Insights, Recommendations & Forecasts** | Single `RecommendationCard` with bold action, 7-day Recharts price trend trajectory, and proactive risk alerts |
 | **Pattern & Anomaly Detection** | Gemini Vision multimodal leaf disease diagnosis + 7-day moving average price deviation detector (>15% alert) |
 | **Explainable AI Decision Support** | Clear "Why AgriMind Recommends This" section with confidence score and step-by-step action plan on every query |
-| **Google Cloud Stack Deployment** | Firebase Hosting + Cloud Run containerized service + Firestore + Gemini 2.0 Flash / Vision |
+| **Google Cloud Stack Architecture** | Firebase Hosting + Cloud Run containerized service + Firestore + Gemini 2.0 Flash / Vision |
 
 ---
 
@@ -67,7 +60,7 @@
 
 ## 🎬 60-Second Demo Script
 
-1. **0:00 - 0:10 (Proactive WOW Moment)**: Open live URL on mobile or browser. The top `AlertBanner` instantly alerts: *"Mandi Price Crash: Cotton in Vidarbha dropped 18.2% in 3 days — HOLD stock for 4-6 days."* (Demonstrates proactive AI reaching out first without waiting to be asked).
+1. **0:00 - 0:10 (Proactive WOW Moment)**: Open local app at `http://localhost:3000`. The top `AlertBanner` instantly alerts: *"Mandi Price Crash: Cotton in Vidarbha dropped 18.2% in 3 days — HOLD stock for 4-6 days."* (Demonstrates proactive AI reaching out first without waiting to be asked).
 2. **0:10 - 0:30 (Hinglish Natural Language Query)**: Click prompt chip or type in Hinglish: *"kya mujhe abhi cotton bechna chahiye?"*. AgriMind responds with a bold `RecommendationCard`, 93% confidence score, and plain Hinglish explanation citing the real MA7 baseline (₹6,700 vs ₹5,650 today).
 3. **0:30 - 0:45 (Gemini Vision Diagnosis)**: Click *"Load Demo Leaf Sample"*. Gemini Vision analyzes the cotton leaf pattern, identifying **Pink Bollworm Infestation** (92% confidence) with an immediate organic/chemical treatment spray action.
 4. **0:45 - 0:55 (Interactive Price Forecast)**: View the Recharts price chart showing actual 30-day prices vs predicted 7-day rebound trajectory.
@@ -75,43 +68,49 @@
 
 ---
 
-## 🛠️ Local Setup & Deployment
+## 🛠️ Local Execution & Cloud Deployment Instructions
 
-### Backend (Node.js + Express)
-```bash
-cd backend
-npm install
-# Set optional Gemini API key (fallback active if omitted)
-export GEMINI_API_KEY="your-gemini-api-key"
-npm run dev
-# Server running at http://localhost:8080
-```
+### Running Locally
 
-### Frontend (React + Vite)
-```bash
-cd frontend
-npm install
-npm run dev
-# Frontend running at http://localhost:3000
-```
+1. **Backend Server (Express)**:
+   ```bash
+   cd backend
+   npm install
+   # Set optional Gemini API key (fallback active if omitted)
+   export GEMINI_API_KEY="your-gemini-api-key"
+   npm start
+   # Server running at http://localhost:8080
+   ```
 
-### Deploy to Google Cloud Run
-```bash
-cd backend
-gcloud run deploy agrimind-backend \
-  --source . \
-  --platform managed \
-  --region asia-south1 \
-  --allow-unauthenticated \
-  --set-env-vars GEMINI_API_KEY="your-key"
-```
+2. **Frontend App (Vite + React)**:
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   # App running at http://localhost:3000
+   ```
 
-### Deploy to Firebase Hosting
-```bash
-cd frontend
-npm run build
-firebase deploy --only hosting
-```
+---
+
+### Deploying to Google Cloud (Optional)
+
+- **Backend to Google Cloud Run**:
+  ```bash
+  cd backend
+  gcloud run deploy agrimind-backend \
+    --source . \
+    --platform managed \
+    --region asia-south1 \
+    --allow-unauthenticated \
+    --set-env-vars GEMINI_API_KEY="your-key"
+  ```
+
+- **Frontend to Firebase Hosting**:
+  ```bash
+  cd frontend
+  npm run build
+  firebase deploy --only hosting
+  ```
 
 ---
 
