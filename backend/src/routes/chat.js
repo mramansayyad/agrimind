@@ -8,11 +8,27 @@ const router = express.Router();
 
 router.post('/chat', async (req, res) => {
   try {
-    const { query, region = 'Vidarbha', crop = 'Cotton' } = req.body;
+    const { query, region = 'Vidarbha' } = req.body;
 
     if (!query || typeof query !== 'string') {
       return res.status(400).json({ error: 'Query parameter is required' });
     }
+
+    // Extract target crop from query if not explicitly passed
+    const queryLower = query.toLowerCase();
+    const cropMatches = ['mango', 'cotton', 'soybean', 'soya', 'wheat', 'rice', 'paddy', 'tomato', 'onion', 'sugarcane', 'banana', 'chana', 'tur', 'gram', 'maize', 'corn', 'groundnut', 'potato', 'chilli'];
+    let targetCrop = req.body.crop;
+    if (!targetCrop) {
+      for (const c of cropMatches) {
+        if (queryLower.includes(c)) {
+          targetCrop = c.charAt(0).toUpperCase() + c.slice(1);
+          if (c === 'soya') targetCrop = 'Soybean';
+          if (c === 'paddy') targetCrop = 'Rice';
+          break;
+        }
+      }
+    }
+    const crop = targetCrop || 'Cotton';
 
     // 1. Gather Ground-Truth Context (RAG)
     const marketContext = getCropPrices(crop, region);
