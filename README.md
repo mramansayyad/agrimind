@@ -1,8 +1,5 @@
 # AgriMind — AI-Powered Decision Intelligence Platform
 
-> **Google Cloud Cohort Hackathon — Problem Statement 2 Solution**  
-> *Turning weather, soil, mandi market data, and visual crop health into clear, proactive, explainable decisions for Indian farmers — in their language, in seconds.*
-
 ---
 
 ## 🚀 Live & Cloud Production Infrastructure
