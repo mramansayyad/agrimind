@@ -18,9 +18,9 @@ export default function ArchitectureDiagram() {
     },
     {
       step: "03",
-      title: "Gemini 2.0 AI Engine",
+      title: "Gemini 3.5 AI Engine",
       icon: <Cpu className="w-5 h-5 text-purple-400" />,
-      desc: "Gemini 2.0 Flash (Hinglish Reasoning) + Gemini Vision (Multimodal Crop Disease Diagnosis)"
+      desc: "Gemini 3.5 Flash (Hinglish Reasoning) + Gemini Vision (Multimodal Crop Disease Diagnosis)"
     },
     {
       step: "04",
@@ -70,7 +70,7 @@ export default function ArchitectureDiagram() {
       </div>
 
       <div className="mt-4 p-3 bg-emerald-950/30 border border-emerald-500/20 rounded-xl flex items-center justify-between text-xs text-emerald-200">
-        <span className="font-semibold">Deployed Stack: Firebase Hosting + Cloud Run + Firestore + Gemini 2.0 Flash</span>
+        <span className="font-semibold">Deployed Stack: Firebase Hosting + Cloud Run + Firestore + Gemini 3.5 Flash</span>
         <span className="font-bold text-white bg-emerald-900/80 px-2.5 py-1 rounded-lg border border-emerald-500/40">
           Live & Production Ready
         </span>

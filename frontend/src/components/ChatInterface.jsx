@@ -47,7 +47,7 @@ export default function ChatInterface({ onSubmitQuery, isLoading, region }) {
           </div>
         </div>
         <span className="text-[11px] font-semibold px-2.5 py-1 bg-emerald-950 text-emerald-300 border border-emerald-500/30 rounded-full">
-          Gemini 2.0 Flash
+          Gemini 3.5 Flash
         </span>
       </div>
 

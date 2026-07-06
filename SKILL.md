@@ -13,11 +13,11 @@ project_codename: AgriMind
 - Domain: Indian agriculture & rural economic decision-making (Persona: Ramesh in Vidarbha, Maharashtra).
 
 ## 1. Mandatory Architecture Pattern
-Data Sources -> Ingestion Layer -> AI Engine (Gemini 2.0 Flash + Vision) -> Decision Layer -> Action Layer -> Outcome.
+Data Sources -> Ingestion Layer -> AI Engine (Gemini 3.5 Flash + Vision) -> Decision Layer -> Action Layer -> Outcome.
 
 ## 2. Required Core Modules
 1. Multi-source ingestion (Weather API, Mandi prices, Soil data, NL queries)
-2. Natural language interaction (Hinglish-tolerant chat via Gemini 2.0 Flash)
+2. Natural language interaction (Hinglish-tolerant chat via Gemini 3.5 Flash)
 3. Insights, forecasts, alerts (Irrigation advisory, price trend forecast, proactive anomaly risk alerts)
 4. Pattern/anomaly detection (Gemini Vision disease diagnosis, >15% moving average price anomaly detector)
 5. Decision support (Single "Recommended Action" card with plain-language reasoning & confidence)

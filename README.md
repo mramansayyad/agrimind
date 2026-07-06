@@ -27,11 +27,11 @@
 | Problem Statement Requirement | AgriMind Solution & Module |
 |---|---|
 | **Multi-source Data Ingestion** | Open-Meteo live weather API + 30-day seeded Mandi price history (10 crops x 4 Indian regions) + district soil dataset |
-| **Natural Language Interaction** | Gemini 2.0 Flash chat interface supporting English, Hindi, and Hinglish code-mixed input |
+| **Natural Language Interaction** | Gemini 3.5 Flash chat interface supporting English, Hindi, and Hinglish code-mixed input |
 | **Insights, Recommendations & Forecasts** | Single `RecommendationCard` with bold action, 7-day Recharts price trend trajectory, and proactive risk alerts |
 | **Pattern & Anomaly Detection** | Gemini Vision multimodal leaf disease diagnosis + 7-day moving average price deviation detector (>15% alert) |
 | **Explainable AI Decision Support** | Clear "Why AgriMind Recommends This" section with confidence score and step-by-step action plan on every query |
-| **Google Cloud Stack Architecture** | Firebase Hosting + Cloud Run containerized service + Firestore + Google Cloud Vertex AI (Gemini 2.0 Flash / Vision) |
+| **Google Cloud Stack Architecture** | Firebase Hosting + Cloud Run containerized service + Firestore + Google Cloud Vertex AI (Gemini 3.5 Flash / Vision) |
 
 ---
 
@@ -51,7 +51,7 @@
  - 7-Day Moving Average Anomaly Engine
          │
          ▼
-[ Vertex AI Platform Engine ] ── Google Cloud Vertex AI (Gemini 2.0 Flash Reasoning + Gemini Vision Multimodal)
+[ Vertex AI Platform Engine ] ── Google Cloud Vertex AI (Gemini 3.5 Flash Reasoning + Gemini Vision Multimodal)
  - Prompt Synthesis with Ground-Truth Mandi Context
  - Vision Pest & Disease Pattern Recognition via Vertex AI SDK
          │
@@ -125,5 +125,5 @@
 1. **Solution Quality & Functionality (20%)**: Every core requirement works end-to-end; no dead buttons, stubs, or placeholder copy.
 2. **Architecture & Technical Execution (20%)**: Clean separation of ingestion, RAG context synthesis, AI reasoning, and decision layers deployed on Google Cloud Run + Firebase.
 3. **Impact & Use Case Relevance (20%)**: Targeted persona (Ramesh in Vidarbha) with quantified financial impact (₹11,500/acre saved).
-4. **Technical Choices & Feasibility (20%)**: Pragmatic stack (Node.js, Vite, Tailwind, Open-Meteo, Gemini 2.0 Flash) with zero unnecessary bloat.
+4. **Technical Choices & Feasibility (20%)**: Pragmatic stack (Node.js, Vite, Tailwind, Open-Meteo, Gemini 3.5 Flash) with zero unnecessary bloat.
 5. **Demo, UX & Presentation (20%)**: High-contrast interface optimized for indoor/screen viewing during evaluation; a light-mode variant is a planned iteration for outdoor direct-sunlight field deployment. Proactive alerts render in <3 seconds.

@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
     status: 'HEALTHY',
     version: '1.0.0',
     platform: 'Google Cloud Run',
-    aiEngine: 'Gemini 2.0 Flash & Gemini Vision',
+    aiEngine: 'Gemini 3.5 Flash & Gemini Vision',
     timestamp: new Date().toISOString()
   });
 });

@@ -194,7 +194,7 @@ export default function Dashboard() {
 
       {/* Footer */}
       <footer className="max-w-7xl mx-auto px-4 sm:px-6 mt-12 text-center text-xs text-slate-500 border-t border-slate-800/80 pt-6">
-        <p>AgriMind • Powered by Gemini 2.0 Flash, Gemini Vision & Google Cloud Run</p>
+        <p>AgriMind • Powered by Gemini 3.5 Flash, Gemini Vision & Google Cloud Run</p>
         <p className="mt-1 text-slate-600">Built for Google Cloud Hackathon • Vidarbha Agricultural Decision Support System</p>
       </footer>
 
