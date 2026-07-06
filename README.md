@@ -31,7 +31,7 @@
 | **Insights, Recommendations & Forecasts** | Single `RecommendationCard` with bold action, 7-day Recharts price trend trajectory, and proactive risk alerts |
 | **Pattern & Anomaly Detection** | Gemini Vision multimodal leaf disease diagnosis + 7-day moving average price deviation detector (>15% alert) |
 | **Explainable AI Decision Support** | Clear "Why AgriMind Recommends This" section with confidence score and step-by-step action plan on every query |
-| **Google Cloud Stack Architecture** | Firebase Hosting + Cloud Run containerized service + Firestore + Gemini 2.0 Flash / Vision |
+| **Google Cloud Stack Architecture** | Firebase Hosting + Cloud Run containerized service + Firestore + Google Cloud Vertex AI (Gemini 2.0 Flash / Vision) |
 
 ---
 
@@ -51,9 +51,9 @@
  - 7-Day Moving Average Anomaly Engine
          │
          ▼
-[ AI Engine ] ────────────────── Gemini 2.0 Flash (Reasoning) + Gemini Vision (Multimodal)
+[ Vertex AI Platform Engine ] ── Google Cloud Vertex AI (Gemini 2.0 Flash Reasoning + Gemini Vision Multimodal)
  - Prompt Synthesis with Ground-Truth Mandi Context
- - Vision Pest & Disease Pattern Recognition
+ - Vision Pest & Disease Pattern Recognition via Vertex AI SDK
          │
          ▼
 [ Decision & Action Layer ] ──── Frontend SPA on Firebase Hosting (Vite + React + Tailwind)

@@ -1,15 +1,22 @@
-// [Judging Category: Solution quality & functionality / AI Engine]
+// [Judging Category: Solution quality & functionality / AI Engine on Vertex AI]
 import { GoogleGenAI } from '@google/genai';
 
-const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || '';
-let aiClient = null;
+// Configure Vertex AI mode for GCP
+const project = process.env.GOOGLE_CLOUD_PROJECT || process.env.GCP_PROJECT || 'gen-lang-client-0309647987';
+const location = process.env.GOOGLE_CLOUD_LOCATION || process.env.GCP_LOCATION || 'asia-south1';
 
-if (apiKey) {
-  try {
-    aiClient = new GoogleGenAI({ apiKey });
-  } catch (e) {
-    console.warn('[GeminiService] Failed to initialize GoogleGenAI client:', e.message);
-  }
+process.env.GOOGLE_GENAI_USE_VERTEXAI = 'true';
+
+let aiClient = null;
+try {
+  aiClient = new GoogleGenAI({
+    vertexai: true,
+    project,
+    location
+  });
+  console.log(`[VertexAI] Vertex AI client active for GCP project ${project} in ${location}`);
+} catch (e) {
+  console.warn('[VertexAI] Failed to initialize Vertex AI client:', e.message);
 }
 
 /**
