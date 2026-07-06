@@ -1,6 +1,5 @@
 # Dependencies
 node_modules/
-package-lock.json
 
 # Environment & Secrets
 .env
@@ -21,7 +20,3 @@ build/
 .vscode/
 *.log
 
-# Exclude SKILL files as requested
-SKILL.md
-*.skill.md
-.skills/
