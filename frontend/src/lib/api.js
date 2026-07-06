@@ -1,7 +1,7 @@
 // [Judging Category: Architecture & technical execution]
 
-// In production, replaced with deployed Cloud Run service URL
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080/api';
+// Live GCP Cloud Run Backend Service URL
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://agrimind-backend-714352198286.asia-south1.run.app/api';
 
 export async function fetchAlerts(region = 'Vidarbha') {
   try {

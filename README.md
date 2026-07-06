@@ -7,8 +7,8 @@
 
 ## 🚀 Live & Cloud Production Infrastructure
 
-- **Frontend Application (Firebase Hosting)**: `https://agrimind-app.web.app` *(Deployed from `frontend/dist` build)*
-- **Backend API Proxy Engine (Google Cloud Run)**: `https://agrimind-backend-asia-south1.a.run.app` *(Node.js Express container on `asia-south1`)*
+- **Frontend Application (Firebase Hosting)**: `https://gen-lang-client-0309647987.web.app` *(Deployed from `frontend/dist` build)*
+- **Backend API Proxy Engine (Google Cloud Run)**: `https://agrimind-backend-714352198286.asia-south1.run.app` *(Node.js Express container on `asia-south1`)*
 
 ---
 
